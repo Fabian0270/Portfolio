@@ -1,0 +1,159 @@
+/* Grundläggande reset av margin och padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Bakgrundsbild som täcker hela sidan */
+body {
+    background-image: url('photo-1533134486753-c833f0ed4866.avif'); /* Byt ut till din bilds sökväg */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white; /* Gör all text vit som standard */
+    font: 1.2rem "Fira Sans", sans-serif;
+}
+
+/* Centrera headern */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Stil för profilbilden */
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Centrera sektionerna */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Stil för About Me-sektionen */
+#about {
+    max-width: 500px; /* Minskad maxbredd för en mer kompakt look */
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+/* Projektsektion */
+#projects {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#about, #projects {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* Projektlistan */
+.projects-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+/* Stil för projektens bilder och videor */
+.project-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.project-item video, .project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Skills-sektionen */
+#skills {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Rubrik i Skills-sektionen */
+#skills h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2em;
+    color: #333;
+}
+
+/* Skills-kategorier */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skill-category {
+    flex: 1 1 200px;
+    margin: 10px;
+    color: #333;
+}
+
+.skill-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill-category ul li {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Media Queries för att stapla projekten vertikalt på mindre skärmar */
+@media (max-width: 896px) {
+    .projects-list {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .project-item {
+        width: 100%; 
+        max-width: 400px; 
+    }
+}

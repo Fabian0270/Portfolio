@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="img\vid\1692707986202.jpg" alt="Fabian" class="profile-image">
+        <h1>Fabian Olsson</h1>
+        <h2>Fullstack Developer Student</h2>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate student striving to become a Fullstack developer with a deep understanding of both frontend and backend development.
+            Currently, I am dedicated to my education, 
+            focusing on acquiring knowledge in various programming languages, web development, and database design.
+        </p>
+    </section>
+    
+    <section id="projects">
+        <h2>My Favourite Projects</h2>
+        <ul class="projects-list">
+            <li>
+                <h3>Checkout-session</h3>
+                <a href="https://github.com/Fabian0270/Checkout-session" target="_blank">
+                    <div class="project-item">
+                        <video id="checkoutVideo" muted loop>
+                            <source src="img\vid\Checkout session – Gjord med Clipchamp.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </a>
+                <p>
+                    School excercise where I built a fully functional webshop for a fictional gym. 
+                    I used React, TypeScript, Express, CORS and Stripe for this project.
+                </p>
+            </li>
+            <li>
+                <h3>The-Zoo</h3>
+                <a href="https://github.com/Fabian0270/The-Zoo" target="_blank">
+                    <div class="project-item">
+                        <img src="img\vid\Skärmbild 2024-10-17 014134.png" alt="">
+                    </div>
+                </a>
+                <p>
+                    This program simulates an interactive zoo where the user can feed, play with, 
+                    and add animals, as well as manage visitors. 
+                    The program is built with Python and uses object-oriented programming (OOP) to define animals and their behaviors.
+                </p>
+            </li>
+            <li>
+                <h3>The Restaurant</h3>
+                <a href="https://github.com/Medieinstitutet/the-restaurant-team-12" target="_blank">
+                    <div class="project-item">
+                        <video id="restaurantVideo" muted loop>
+                            <source src="img\vid\The Restaurant – Gjord med Clipchamp.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </a>
+                <p>
+                    Group project. Where me and two classmates created a Burger restaurant. 
+                    With a kinda functional booking page and a contact us page. 
+                    We also created a page for the Admin.
+                    We worked only with React, TypeScript and some Scss in this project.</p>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <strong>Programming Languages:</strong>
+                <ul>
+                    <li>Java</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>PHP</li>
+                    <li>TypeScript</li>
+                    <li>SQL</li>
+                    <li>MongoDB</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <strong>Web Technologies:</strong>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>SCSS</li>
+                    <li>React.js</li>
+                    <li>Vue.js</li>
+                    <li>Node.js</li>
+                    <li>Express.js</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <strong>Frameworks:</strong>
+                <ul>
+                    <li>Java Spring</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <strong>Development Methodologies:</strong>
+                <ul>
+                    <li>Agile Methods</li>
+                    <li>Scrum</li>
+                    <li>Lean</li>
+                    <li>XP</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <strong>APIs:</strong>
+                <ul>
+                    <li>REST API</li>
+                    <li>Stripe API</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <strong>Design:</strong>
+                <ul>
+                    <li>UI/UX</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <strong>Programming Concepts:</strong>
+                <ul>
+                    <li>Object-Oriented Programming (OOP)</li>
+                    <li>MVC (Model-View-Controller)</li>
+                    <li>ORM (Object-Relational Mapping)</li>
+                </u>
+            </div>
+        </div>    
+    </section>
+    <footer>
+        <p>&copy; 2024 Fabian Olsson</p>
+    </footer>
+    <script>
+        // Hämta videor genom deras id:n
+        const checkoutVideo = document.getElementById('checkoutVideo');
+        const restaurantVideo = document.getElementById('restaurantVideo');
+      
+        // Funktioner för att spela upp och pausa videon vid musens rörelse
+        document.querySelectorAll('.project-item').forEach(item => {
+          item.addEventListener('mouseenter', () => {
+            const video = item.querySelector('video');
+            if (video) {
+              video.play(); // Spela videon
+            }
+          });
+      
+          item.addEventListener('mouseleave', () => {
+            const video = item.querySelector('video');
+            if (video) {
+              video.pause(); // Pausa videon
+              video.currentTime = 0; // Återställ till början
+            }
+          });
+        });
+      </script>      
+</body>
+</html>
